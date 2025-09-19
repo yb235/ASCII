@@ -89,7 +89,7 @@ Make this ASCII art absolutely stunning - think competition-level creativity!`,
 }
 
 async function main() {
-  const imageUrl = process.argv[2] || './WIN_20250919_19_52_29_Pro.jpg';
+  const imageUrl = process.argv[2] || './assets/WIN_20250919_19_52_29_Pro.jpg';
   
   if (!process.env.OPENAI_API_KEY) {
     console.error('❌ Please set OPENAI_API_KEY in your .env file');

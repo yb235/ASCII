@@ -23,7 +23,7 @@ function addFrame(asciiArt: string, style = 'double'): string {
 
 async function demonstrateArtisticVariations() {
   const converter = new ASCIIConverter();
-  const imagePath = './WIN_20250919_19_52_29_Pro.jpg';
+  const imagePath = './assets/WIN_20250919_19_52_29_Pro.jpg';
   
   console.log('🎭 ASCII Art Agent - Competition-Ready Demo');
   console.log('═'.repeat(80));

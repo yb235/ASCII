@@ -21,7 +21,7 @@ build/
 *.jpeg
 *.gif
 *.bmp
-!WIN_20250919_19_52_29_Pro.jpg
+!assets/WIN_20250919_19_52_29_Pro.jpg
 
 # IDE and editor files
 .vscode/

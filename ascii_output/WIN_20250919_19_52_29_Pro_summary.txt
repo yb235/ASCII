@@ -1,0 +1,8 @@
+Multi-Resolution ASCII Art Gallery
+==================================================
+4K Ultra     | 2000x562 | 4707ms | ascii_output/WIN_20250919_19_52_29_Pro_4k_ultra.txt
+4K High      | 1600x450 | 3105ms | ascii_output/WIN_20250919_19_52_29_Pro_4k_high.txt
+2K           | 1200x337 | 1885ms | ascii_output/WIN_20250919_19_52_29_Pro_2k.txt
+HD           | 800x225 | 958ms | ascii_output/WIN_20250919_19_52_29_Pro_hd.txt
+Standard     | 400x112 | 408ms | ascii_output/WIN_20250919_19_52_29_Pro_standard.txt
+Terminal     | 120x33 | 210ms | ascii_output/WIN_20250919_19_52_29_Pro_terminal.txt

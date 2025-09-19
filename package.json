@@ -8,7 +8,9 @@
     "start": "node dist/agent.js",
     "dev": "ts-node agent.ts",
     "demo": "ts-node demo.ts",
-    "test": "ts-node ascii-converter.ts"
+    "test": "ts-node ascii-converter.ts",
+    "4k": "ts-node ascii-4k-converter.ts",
+    "4k-gallery": "ts-node -e \"import('./ascii-4k-converter').then(m => m.test4KConversion())\""
   },
   "keywords": ["ascii", "art", "ai", "image", "conversion"],
   "author": "",

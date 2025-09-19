@@ -2,13 +2,13 @@
   "name": "ascii-art-agent",
   "version": "1.0.0",
   "description": "An AI agent that converts images to creative ASCII art using Vercel AI SDK",
-  "main": "agent.js",
+  "main": "dist/agent.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/agent.js",
-    "dev": "ts-node agent.ts",
-    "demo": "ts-node demo.ts",
-    "test": "ts-node ascii-converter.ts"
+    "dev": "ts-node src/agent.ts",
+    "demo": "ts-node src/demo.ts",
+    "test": "ts-node src/ascii-converter.ts"
   },
   "keywords": ["ascii", "art", "ai", "image", "conversion"],
   "author": "",

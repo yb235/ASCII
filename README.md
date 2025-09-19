@@ -50,7 +50,7 @@ A sophisticated AI agent that converts images into stunning ASCII art using inte
 Run the enhanced demo to see all capabilities:
 
 ```bash
-npx ts-node demo.ts
+npx ts-node src/demo.ts
 ```
 
 This showcases:
@@ -99,22 +99,30 @@ Current assessment: **9.5/10** (Top-tier competitor)
 ## 📁 Project Structure
 
 ```
-├── agent.ts                    # Main AI agent with enhanced prompting
-├── ascii-converter.ts          # Standalone ASCII converter (working)
-├── demo.ts                     # Competition demonstration showcase
-├── tools/                      # Advanced image processing tools
-│   ├── analyze-image.ts        # Intelligent image analysis
-│   ├── image-to-ascii.ts       # Enhanced ASCII conversion with multiple character sets
-│   ├── enhance-contrast.ts     # Smart contrast enhancement
-│   ├── adjust-brightness.ts    # Brightness optimization
-│   ├── invert-colors.ts        # Color inversion effects
-│   └── add-noise.ts           # Artistic noise and texture
-└── WIN_20250919_19_52_29_Pro.jpg # Test image for demonstration
+├── src/                         # Source code
+│   ├── agent.ts                 # Main AI agent with enhanced prompting
+│   ├── ascii-converter.ts       # Standalone ASCII converter (working)
+│   ├── demo.ts                  # Competition demonstration showcase
+│   └── tools/                   # Advanced image processing tools
+│       ├── analyze-image.ts     # Intelligent image analysis
+│       ├── image-to-ascii.ts    # Enhanced ASCII conversion with multiple character sets
+│       ├── enhance-contrast.ts  # Smart contrast enhancement
+│       ├── adjust-brightness.ts # Brightness optimization
+│       ├── invert-colors.ts     # Color inversion effects
+│       └── add-noise.ts         # Artistic noise and texture
+├── docs/                        # Documentation
+│   ├── agent.md                 # Agent development guide
+│   └── IMPROVEMENT_PLAN.md      # Competition improvement roadmap
+├── assets/                      # Test images and examples
+│   └── WIN_20250919_19_52_29_Pro.jpg # Test image for demonstration
+├── package.json                 # Project configuration and scripts
+├── tsconfig.json               # TypeScript configuration
+└── README.md                   # This file
 ```
 
 ## 🎨 Example Output Styles
 
-The agent now generates multiple artistic variations:
+The agent generates multiple artistic variations:
 
 ### Standard ASCII (Competition-Ready)
 High-resolution conversion with professional framing and optimal character density.
@@ -139,13 +147,13 @@ npm run dev ./your-image.jpg
 ### Direct ASCII Converter
 ```bash
 # Test standalone converter
-npx ts-node ascii-converter.ts
+npx ts-node src/ascii-converter.ts
 ```
 
 ### Competition Demo
 ```bash
 # Run full capability demonstration
-npx ts-node demo.ts
+npx ts-node src/demo.ts
 ```
 
 ## 🎯 Competition Strategy
@@ -217,75 +225,3 @@ The AI agent automatically selects tools based on image analysis:
 - ✅ Clear, recognizable, high-quality output
 
 Ready for competition deployment! 🚀
-
-## Project Structure
-
-```
-├── agent.ts                 # Main AI agent with Vercel AI SDK
-├── ascii-converter.ts       # Standalone ASCII converter (working)
-├── tools/                   # Image transformation tools
-│   ├── image-to-ascii.ts   # Core ASCII conversion
-│   ├── invert-colors.ts    # Color inversion
-│   ├── enhance-contrast.ts # Contrast enhancement
-│   ├── adjust-brightness.ts # Brightness adjustment
-│   └── add-noise.ts        # Artistic noise
-└── WIN_20250919_19_52_29_Pro.jpg # Test image
-```
-
-## Example Output
-
-The converter successfully generates ASCII art from the provided test image with multiple creative variations:
-
-- **Original Image**: Standard ASCII conversion
-- **Enhanced Contrast**: Higher definition ASCII with improved contrast
-- **Inverted Colors**: Dramatic negative effect ASCII art
-
-## Usage
-
-### Standalone Converter
-```typescript
-import { ASCIIConverter } from './ascii-converter';
-
-const converter = new ASCIIConverter();
-const ascii = await converter.convertImageToAscii('./image.jpg', {
-  width: 120,
-  chars: ' .:-=+*#%@'
-});
-console.log(ascii);
-```
-
-### AI Agent (in development)
-```typescript
-import { runAgent } from './agent';
-
-await runAgent('./image.jpg');
-```
-
-## Competition Readiness
-
-This ASCII art agent meets the Hack Night competition requirements:
-
-- ✅ **Multiple Tool Calls**: Uses contrast enhancement, color inversion, and brightness adjustment
-- ✅ **Text-Based Output**: Generates pure ASCII text output
-- ✅ **Creative Transformations**: Applies artistic image modifications
-- ✅ **Smart Tool Usage**: Intelligent selection of transformations
-- ✅ **Clear Output**: Produces recognizable and artistic ASCII art
-
-## Quality Assessment
-
-The current implementation successfully converts the test image into clear, recognizable ASCII art with good detail preservation and artistic quality. The multiple transformation options provide creative variety suitable for competition judging criteria.
-
-## Scripts
-
-- `npm run build` - Compile TypeScript
-- `npm run start` - Run compiled agent
-- `npm run dev` - Run with ts-node
-- `npm run test` - Test ASCII converter
-
-## Dependencies
-
-- **ai**: Vercel AI SDK for agent framework
-- **@ai-sdk/openai**: OpenAI integration
-- **jimp**: Image processing and manipulation
-- **zod**: Schema validation
-- **dotenv**: Environment configuration

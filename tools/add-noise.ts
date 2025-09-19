@@ -5,12 +5,11 @@ import path from 'path';
 
 export const addNoise = tool({
   description: 'Adds artistic noise to an image for creative ASCII effects.',
-  parameters: z.object({
+  inputSchema: z.object({
     imageUrl: z.string().describe('The URL or file path of the image to process.'),
     intensity: z.number().min(0).max(100).optional().describe('Noise intensity (0-100, default: 20)'),
   }),
-  execute: async (params: any) => {
-    const { imageUrl, intensity = 20 } = params;
+  execute: async ({ imageUrl, intensity = 20 }) => {
     try {
       const image = await Jimp.read(imageUrl);
       

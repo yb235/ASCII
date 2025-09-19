@@ -5,11 +5,10 @@ import path from 'path';
 
 export const invertColors = tool({
   description: 'Inverts the colors of an image, creating a negative effect.',
-  parameters: z.object({
+  inputSchema: z.object({
     imageUrl: z.string().describe('The URL or file path of the image to invert.'),
   }),
-  execute: async (params: any) => {
-    const { imageUrl } = params;
+  execute: async ({ imageUrl }) => {
     try {
       const image = await Jimp.read(imageUrl);
       image.invert();

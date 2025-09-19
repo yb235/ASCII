@@ -4,14 +4,13 @@ import Jimp from 'jimp';
 
 export const imageToAscii = tool({
   description: 'Converts an image to ASCII art using character density mapping.',
-  parameters: z.object({
+  inputSchema: z.object({
     imageUrl: z.string().describe('The URL or file path of the image to convert.'),
     width: z.number().optional().describe('Width of the ASCII output (default: 80)'),
     height: z.number().optional().describe('Height of the ASCII output (default: auto)'),
     chars: z.string().optional().describe('Characters to use for ASCII art (default: gradient)')
   }),
-  execute: async (params: any) => {
-    const { imageUrl, width = 80, height, chars = ' .:-=+*#%@' } = params;
+  execute: async ({ imageUrl, width = 80, height, chars = ' .:-=+*#%@' }) => {
     try {
       const image = await Jimp.read(imageUrl);
       

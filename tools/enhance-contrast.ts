@@ -5,12 +5,11 @@ import path from 'path';
 
 export const enhanceContrast = tool({
   description: 'Enhances the contrast of an image to make ASCII conversion more dramatic.',
-  parameters: z.object({
+  inputSchema: z.object({
     imageUrl: z.string().describe('The URL or file path of the image to enhance.'),
     level: z.number().min(0).max(1).optional().describe('Contrast level (0-1, default: 0.5)'),
   }),
-  execute: async (params: any) => {
-    const { imageUrl, level = 0.5 } = params;
+  execute: async ({ imageUrl, level = 0.5 }) => {
     try {
       const image = await Jimp.read(imageUrl);
       image.contrast(level);

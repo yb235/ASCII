@@ -1,0 +1,28 @@
+{
+  "name": "ascii-art-agent",
+  "version": "1.0.0",
+  "description": "An AI agent that converts images to creative ASCII art using Vercel AI SDK",
+  "main": "agent.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/agent.js",
+    "dev": "ts-node agent.ts",
+    "test": "node dist/agent.js"
+  },
+  "keywords": ["ascii", "art", "ai", "image", "conversion"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ai": "^5.0.47",
+    "@ai-sdk/openai": "^2.0.32",
+    "zod": "^3.22.0",
+    "dotenv": "^16.3.0",
+    "jimp": "^0.22.0",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}
